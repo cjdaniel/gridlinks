@@ -1,0 +1,1889 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Franklin Ave under Hiawatha Ave",
+          "status": "closed",
+          "reason": "🤷",
+          "agency": "MnDOT",
+          "source": "CJD",
+          "last_updated": "2025-05-29"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24937357505178,
+            44.96259037031322
+          ],
+          "type": "Point"
+        },
+        "id": 0
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Cedar Ave under Hiawatha Ave",
+          "status": "closed",
+          "reason": "🤷",
+          "agency": "MnDOT",
+          "source": "CJD",
+          "last_updated": "2025-05-29"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24675711025318,
+            44.959966254675095
+          ],
+          "type": "Point"
+        },
+        "id": 1
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "24th St pedestrian bridge over Hiawatha Ave",
+          "status": "open",
+          "accessible": "yes",
+          "source": "CJD",
+          "last_updated": "2025-05-29"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24534649444827,
+            44.95866220165061
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "11th Ave S over I-94/I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.25819124228742,
+            44.96582007283797
+          ],
+          "type": "Point"
+        },
+        "id": 3
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Chicago Ave S over I-94/I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2625712984696,
+            44.96579424327135
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Park Ave S over I-94/I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26513155234363,
+            44.96573600452922
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Portland Ave S over I-94/I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26767481424505,
+            44.965753223980016
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Franklin Ave over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26961036305755,
+            44.962686050114826
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "24th St pedestrian bridge over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26957799507197,
+            44.959301643203105
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "26th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27037163778083,
+            44.95552824194087
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "28th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27333871157428,
+            44.95194945077611
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Midtown Greenway under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2744360176499,
+            44.950360699510384
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lake St under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27481621467918,
+            44.9483593635465
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "31st St under I-35W",
+          "status": "closed",
+          "reason": "🤷",
+          "agency": "MnDOT",
+          "source": "CJD",
+          "last_updated": "2025-05-29"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27486597713542,
+            44.94665407782071
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "35th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27469515327904,
+            44.93956261748346
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "36th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27466871915728,
+            44.93775505228254
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "38th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2746671112444,
+            44.93414068227213
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "40th St pedestrian bridge over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27468467599019,
+            44.93045267435261
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "42nd St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27468467366232,
+            44.926897440771256
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "46th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27478160916688,
+            44.919664133848784
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "50th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27483008141621,
+            44.912454222054066
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Minnehaha Creek trail under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27482009107645,
+            44.909050074640845
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Minnehaha Pkwy under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27482537793098,
+            44.908832904815114
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Diamond Lake Rd over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27490460387526,
+            44.90355618480007
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "60th St under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27507937845552,
+            44.894278392210936
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nicollet Ave S under I-35W/MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27810807431553,
+            44.89042943618986
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pleasant Ave S (unofficial along RR tracks) under I-35W/MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28328120270484,
+            44.89018434816285
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lyndale Ave S under I-35W/MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28834548691394,
+            44.89021849667503
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "W 61st St pedestrian bridge over MN-121",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.29438300163535,
+            44.8924212803816
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Penn Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.30866554081962,
+            44.89075259649468
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Xerxes Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.31883873594174,
+            44.890805548658534
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "W 58th St crossing of MN-121",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28956239229265,
+            44.8978360084767
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Portland Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26785632675715,
+            44.89072429825802
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "14th Ave S pedestrian bridge over MN-62",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "no"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.25509184094437,
+            44.891878497363194
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bloomington Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.25282977777711,
+            44.89360754122902
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "57th St pedestrian bridge over MN-77",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "no"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24720276074216,
+            44.89971793111954
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "28th Ave S under MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2323787947062,
+            44.89746942290782
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "34th Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22297781349292,
+            44.89753420437637
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "40th Ave S pedestrian bridge over MN-62",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21558770418797,
+            44.89837853639261
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "43rd Ave S over MN-62",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21150754921001,
+            44.898414742036096
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Minnehaha Ave crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.19960501347481,
+            44.8996857055206
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 54th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.1992699265496,
+            44.90539203160316
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 52nd St/Minnehaha Ave crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.20574838749245,
+            44.909156319299825
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 50th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21036321354241,
+            44.91287956420618
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Minnehaha Pkwy over Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21517180105425,
+            44.91629735476042
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 46th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21865467746922,
+            44.91965796591302
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 42nd St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22370187257056,
+            44.92690308151512
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 38th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22863849264901,
+            44.93411847410252
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 35th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23236973462988,
+            44.93953534322543
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 32nd St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23597055079117,
+            44.944756548936596
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lake St under Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23820414273965,
+            44.94835921425084
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 28th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24091570792147,
+            44.95191496794598
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Midtown Greenway over Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24241558652199,
+            44.95431239312444
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 26th St crossing of Hiawatha Ave",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2430482613077,
+            44.9555498622081
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Hiawatha LRT Trail under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2494456343255,
+            44.96627799600449
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Cedar Ave S under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24727369212674,
+            44.96576235646674
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "20th Ave S over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24417812822823,
+            44.96465447776532
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pedestrian bridge over I-94",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "yes"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24010842178073,
+            44.96432772577626
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "25th Ave S over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23615621064602,
+            44.96432558754694
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Riverside Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2333597688073,
+            44.964316967006255
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Franklin Ter under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2289170532323,
+            44.96478808824713
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "W River Pkwy under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22696075187005,
+            44.96564623407562
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 27th Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22438024825541,
+            44.96684173271305
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 27th Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22059515661667,
+            44.96707249926462
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE Franklin Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21578543610296,
+            44.96456550838599
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE Seymour Pl pedestrian bridge over I-94",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "no"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21306953504984,
+            44.9624231674469
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pedestrian bridge over SE Huron Blvd / I-94 ramps",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "no"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22278085660375,
+            44.96874145869447
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Samatar Crossing pedestrian bridge over I-35W",
+          "status": "open",
+          "source": "CJD",
+          "last_updated": "2025-05-03",
+          "accessible": "yes"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.25268636717827,
+            44.97033021640837
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Hiawatha LRT Trail over I-35W",
+          "status": "open",
+          "source": "CJD",
+          "last_updated": "2025-05-03"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.25247835587287,
+            44.970639265546765
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Washington Ave S over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24956063989762,
+            44.97385754183662
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bluff St Trail under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24603749033047,
+            44.97665972947985
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "W River Pkwy under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24545668983727,
+            44.977675449960714
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Unofficial trail under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24439185721323,
+            44.980386671607135
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 2nd St under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24407958727362,
+            44.98122218237066
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE University Ave over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24350935568975,
+            44.982278558066156
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 4th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24272641930415,
+            44.98326129042775
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 5th St pedestrian bridge over I-35W",
+          "status": "open",
+          "accessible": "yes"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.24150902028576,
+            44.984820183234916
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SE 8th St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2388313292757,
+            44.98687948810661
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E Hennepin Ave over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23653179080527,
+            44.991492214110224
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Johnson St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23717675973383,
+            44.99252746648631
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Summer St pedestrian bridge over I-35W",
+          "status": "open",
+          "source": "presumed",
+          "accessible": "yes"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23852452176813,
+            44.996837783744525
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Broadway St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23782067364549,
+            44.9987069682731
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Johnson St over I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23666872208129,
+            45.0007190151986
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "New Brighton Blvd under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.23022367952443,
+            45.00219863787686
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Diagonal Regional Trail under I-35W",
+          "status": "open",
+          "source": "CJD",
+          "last_updated": "2025-05-26"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22982165375797,
+            45.0021010116925
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "NE Stinson Blvd under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.22694357964183,
+            45.00130452421379
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "St. Anthony/NE Industrial Blvd under I-35W",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.21223258487328,
+            45.0041378520331
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E 15th St over downtown highway ramps",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.26970090852961,
+            44.968060924958706
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "3rd Ave S over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2726392248215,
+            44.96669792546399
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "1st Ave S over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27654889577623,
+            44.96656106694755
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nicollet Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27784073801149,
+            44.9662474044174
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "LaSalle Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2793582843075,
+            44.965845562290355
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Groveland Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28319887910584,
+            44.964851323839724
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Hennepin/Lyndale over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28830600519136,
+            44.96606313823915
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Loring Greenway over Hennepin/Lyndale/I-94 interchange",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28825882329735,
+            44.964236683412935
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Loring Greenway over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28786316713202,
+            44.9652856279711
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Loring Park/Sculpture Garden pedestrian bridge over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28767881992638,
+            44.969962483220115
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Dunwoody Blvd under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28746105564069,
+            44.971949068931224
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "16th St N under I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28558685642257,
+            44.9751809581814
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Linden Ave N over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28168765318068,
+            44.97592907497969
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "12th St N over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28125922296357,
+            44.976355891472934
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "11th St N over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28091675594767,
+            44.97735673672372
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Glenwood Ave over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28014904967378,
+            44.97890736128011
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "10th St N over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27910878833934,
+            44.97958379485894
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Skyway over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27808136552805,
+            44.98005515750987
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 7th St over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27778816187343,
+            44.98014428735274
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 5th St over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27537342275623,
+            44.98159372326472
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 3rd St/N 4th St pedestrian path over I-394/RR tracks",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.27433526875039,
+            44.983674583719534
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Cedar Lake Trail under I-94",
+          "status": "closed",
+          "reason": "Green Line Extension LRT construction",
+          "agency": "Metro Transit"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28747038856433,
+            44.97751157612538
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Glenwood Ave under I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28740792769422,
+            44.979433554007414
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Olson Memorial Hwy/MN-55 over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2880637228286,
+            44.98435024338713
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 7th St over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2886572783618,
+            44.98764176548465
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "E Lyndale Ave N over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28775405298718,
+            44.990147394832775
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N Plymouth Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2848754150537,
+            44.99196443362922
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "W Broadway Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2828605222198,
+            44.99910990423459
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 26th Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28264020022391,
+            45.00591725441575
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N Lowry Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.282567163185,
+            45.013113617952996
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N Dowling Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28450117005355,
+            45.02393667553454
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 41st Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28698292453281,
+            45.029387613188874
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 42nd Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28747949840482,
+            45.031509369082045
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Shingle Creek Regional Trail under I-94",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28706589240944,
+            45.03380363055342
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "45th Ave trail under I-94",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28591631841566,
+            45.03656086510034
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 49th Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.28464058553155,
+            45.04391854981472
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "N 53rd Ave over I-94",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.2851430587512,
+            45.051134516798726
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Dunwoody Blvd under I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.29439486038659,
+            44.972687369012334
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kenwood Trail under I-394",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.29867670335841,
+            44.97048570146052
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Cedar Lake Trail under I-394",
+          "status": "open",
+          "source": "CJD",
+          "last_updated": "2025-03-28"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.30378732593262,
+            44.96954086539699
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oliver Ave under I-394 / over RR tracks",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.30510793497972,
+            44.96942151679784
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Penn Ave over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.308863895386,
+            44.97000654199533
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Thomas Ave pedestrian bridge over I-394",
+          "status": "open",
+          "source": "presumed"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.31320969926041,
+            44.97015971835336
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Theodore Wirth Pkwy over I-394",
+          "status": "open"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.32190458420928,
+            44.970216081165745
+          ],
+          "type": "Point"
+        }
+      }
+    ]
+  }

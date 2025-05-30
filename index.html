@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title>Grid Links</title>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+ <style>
+    body {
+       margin: 0;
+       padding: 0;
+
+       background: #eeeeee;
+       color: #111111;
+       font-family: Helvetica, sans-serif;
+    }
+    html, body {
+       width: 100%;
+       height: 100%;
+    }
+    h1 {
+        margin: 1em auto 0.5em auto;
+        font-size: 40px;
+        text-align: center;
+        color: black;
+        text-shadow: 1px 1px 2px #666;
+    }
+    p {
+        text-align: center;
+    }
+    p.sub {
+        color: #666;
+    }
+    .critical {
+        color: #cc1111;
+    }
+    a {
+        color: #6495ed;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    table#legend {
+        margin: auto;
+        font-size: 2em;
+    }
+    table#legend td {
+        padding-left: 0.3em;
+    }
+    div#map {
+        width: 75%;
+        height: 75%;
+        margin: auto;
+        border: 3px solid #6495ed;
+    }
+
+    #footer p {
+        color: #eeeeee;
+    }
+
+    .openmarker, .closedmarker, .defaultmarker {
+        font-size: 30px; /* needs to correspond to size below */
+    }
+ </style>
+
+</head>
+
+<body>
+ <h1>GRID LINKS</h1>
+ <p>The map below shows the open or closed status of <span class="critical">critical pedestrian links</span> across human-made barriers like highways.</p>
+ <table id="legend">
+  <tr>
+   <td>&#x1f499;</td><td>Open!</td>
+  </tr>
+  <tr>
+   <td>&#x1f494;</td><td>CLOSED :(</td>
+  </tr>
+ </table>
+ <p>Click on a map marker below for more information about a crossing.</p>
+
+ <div id="map"></div>
+ <p class="sub">Do you have an update, addition, comment, etc? Please send an e-mail to <a href="mailto:gridlinks@chrisdaniel.net">gridlinks@chrisdaniel.net</a></p>
+
+ <script>
+ var map = L.map('map').setView([44.964085426290396, -93.2629625179114], 13);
+
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: 'Base map &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+ const size = 30; // needs to correspond to font-size above
+ const openIconOptions = {
+   iconSize  : [size, size],
+   iconAnchor: [size/2, size + 9], 
+   className : 'openmarker',
+   html: '&#x1f499'
+ }
+ const closedIconOptions = {
+   iconSize  : [size, size],
+   iconAnchor: [size/2, size + 9], 
+   className : 'closedmarker',
+   html: '&#x1f494'
+ }
+ const defaultIconOptions = {
+   iconSize  : [size, size],
+   iconAnchor: [size/2, size + 9], 
+   className : 'defaultmarker',
+   html: '&#x2754'
+ }
+ const openMarkerOptions = {
+   icon: L.divIcon(openIconOptions)
+ }
+ const closedMarkerOptions = {
+   icon: L.divIcon(closedIconOptions)
+ }
+ const defaultMarkerOptions = {
+   icon: L.divIcon(defaultIconOptions)
+ }
+
+ let xhr = new XMLHttpRequest();
+ xhr.open('GET', 'gridlinks.geojson');
+ xhr.setRequestHeader('Content-Type', 'application/json');
+ xhr.responseType = 'json';
+ xhr.onload = function() {
+     if (xhr.status !== 200) return
+     L.geoJSON(xhr.response, {
+        pointToLayer: function(feature, latlng) {
+            marker = L.marker();
+
+            if(feature.properties && feature.properties.status) {
+                switch(feature.properties.status) {
+                    case 'open':
+                        marker=L.marker(latlng, openMarkerOptions);
+                        break;
+                    case 'closed':
+                        marker=L.marker(latlng, closedMarkerOptions);
+                        break;
+                    default:
+                        marker=L.marker(latlng, defaultMarkerOptions);
+                }
+            }
+            return marker;
+        },
+        onEachFeature: function(feature, layer) {
+            details = '';
+            if(! feature.properties.source) {
+                feature.properties.source = 'presumed';
+            }
+            if(feature.properties && feature.properties.status) {
+                switch(feature.properties.status) {
+                    case 'closed':
+                        details += 'Reason: '+feature.properties.reason+'<br/>'
+                            +'Agency: '+feature.properties.agency+'<br/>'
+                        break;
+                }
+                details += 'Source: '+feature.properties.source+'<br/>'
+                    +'Last updated: '+feature.properties.last_updated+'<br/>'
+            }
+            layer.bindPopup(
+                '<strong>'+feature.properties.name+'</strong><br/>'
+                +'Status: '+feature.properties.status+'<br/>'
+                +details
+            );
+        }
+     }).addTo(map);
+ };
+ xhr.send();
+
+ </script>
+
+ <div id="footer">
+  <p>This page was made by a human, for humans.</p>
+ </div>
+
+</body>
+
+</html>
