@@ -151,9 +151,6 @@
         },
         onEachFeature: function(feature, layer) {
             details = '';
-            if(! feature.properties.source) {
-                feature.properties.source = 'presumed';
-            }
             if(feature.properties && feature.properties.status) {
                 switch(feature.properties.status) {
                     case 'closed':
