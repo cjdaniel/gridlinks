@@ -1885,5 +1885,52 @@
           "type": "Point"
         }
       }
+{
+      "type": "Feature",
+      "properties": {
+        "name": "Plymouth Ave bridge",
+        "status": "closed",
+        "reason": "Constructing trail under bridge",
+        "last_updated": "2025-05-30"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.27150396830359,
+          44.9935220261402
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stone Arch Bridge",
+        "status": "closed",
+        "agency": "MnDOT",
+        "last_updated": "2025-05-30",
+        "reason": "Replace/repair stone and mortar"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.25412465347735,
+          44.98065010747908
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northern Pacific Bridge Number 9",
+        "agency": "City of Minneapolis",
+        "status": "closed",
+        "reason": "Deck and railing replacement, rehabilitation of Abutment 1",
+        "last_updated": "2025-05-30"
+      },
+      "geometry": {
+        "coordinates": [-93.24114320847895, 44.97773934115895],
+        "type": "Point"
+      }
+    }
     ]
   }
