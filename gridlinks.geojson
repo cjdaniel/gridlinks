@@ -1931,6 +1931,23 @@
           "coordinates": [-93.24114320847895, 44.97773934115895],
           "type": "Point"
         }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "35E over Mississippi River",
+          "agency": "MnDOT",
+          "status": "open",
+          "source": "Reddit",
+          "last_updated": "2025-05-30"
+        },
+        "geometry": {
+          "coordinates": [
+            -93.14077286750215,
+            44.9062586381996
+          ],
+          "type": "Point"
+        }
       }
     ]
   }
