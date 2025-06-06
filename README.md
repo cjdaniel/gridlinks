@@ -1,6 +1,6 @@
 # Grid Links
 
-[Grid Links](https://chrisdaniel.net/gridlinks/) is a map for tracking closures of pedestrian links across artificial urban barriers like highways.
+[Grid Links](https://chrisdaniel.net/gridlinks/) is a map for tracking closures of pedestrian and cycling links across urban grid barriers like highways.
 
 ## Contributing
 For updating closure info:
