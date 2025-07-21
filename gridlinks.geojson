@@ -1905,10 +1905,9 @@
         "type": "Feature",
         "properties": {
           "name": "Stone Arch Bridge",
-          "status": "closed",
+          "status": "open",
           "agency": "MnDOT",
-          "last_updated": "2025-05-30",
-          "reason": "Replace/repair stone and mortar"
+          "last_updated": "2025-07-21"
         },
         "geometry": {
           "coordinates": [
