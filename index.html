@@ -67,11 +67,70 @@
     .openmarker, .closedmarker, .defaultmarker {
         font-size: 30px; /* needs to correspond to size below */
     }
+
+    #dark-toggle {
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        background: none;
+        border: none;
+        padding: 0.4em 0.7em;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 1000;
+        line-height: 1;
+    }
+
+    body.dark {
+        background: #1a1a1a;
+        color: #e0e0e0;
+    }
+    body.dark h1 {
+        color: white;
+        text-shadow: 1px 1px 2px #000;
+    }
+    body.dark p.sub {
+        color: #999;
+    }
+    body.dark .critical {
+        color: #ff4444;
+    }
+    body.dark #footer p {
+        color: #1a1a1a;
+    }
+    body.dark .leaflet-tile-pane {
+        filter: brightness(0.5);
+    }
+    body.dark .leaflet-bar a {
+        background-color: #333;
+        color: #e0e0e0;
+        border-bottom-color: #555;
+    }
+    body.dark .leaflet-bar a:hover {
+        background-color: #444;
+    }
+    body.dark .leaflet-control-attribution {
+        background-color: rgba(30, 30, 30, 0.8) !important;
+        color: #999;
+    }
+    body.dark .leaflet-control-attribution a {
+        color: #6495ed;
+    }
  </style>
+
+ <script>
+    // Apply dark mode before page renders to avoid flash
+    (function() {
+        var pref = localStorage.getItem('darkMode');
+        var isDark = pref === 'true' || (pref === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) document.documentElement.style.background = '#1a1a1a';
+    })();
+ </script>
 
 </head>
 
 <body>
+ <button id="dark-toggle" aria-label="Toggle dark/light style" title="Toggle dark/light style"></button>
  <h1>GRID LINKS</h1>
  <p>The map below shows the open or closed status of <span class="critical">critical bicycle and pedestrian links</span> across urban barriers like highways.</p>
  <table id="legend">
@@ -184,6 +243,35 @@
      }).addTo(map);
  };
  xhr.send();
+
+ // Dark mode toggle
+ (function() {
+     var pref = localStorage.getItem('darkMode');
+     var isDark = pref === 'true' || (pref === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+     var toggle = document.getElementById('dark-toggle');
+
+     function applyDark(dark) {
+         document.body.classList.toggle('dark', dark);
+         document.documentElement.style.background = dark ? '#1a1a1a' : '';
+         toggle.textContent = dark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+     }
+
+     applyDark(isDark);
+
+     toggle.addEventListener('click', function() {
+         isDark = !isDark;
+         applyDark(isDark);
+         localStorage.setItem('darkMode', isDark);
+     });
+
+     // Follow OS changes if user hasn't manually chosen
+     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+         if (localStorage.getItem('darkMode') === null) {
+             isDark = e.matches;
+             applyDark(isDark);
+         }
+     });
+ })();
 
  </script>
 
