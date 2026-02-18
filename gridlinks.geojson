@@ -24,11 +24,9 @@
         "type": "Feature",
         "properties": {
           "name": "Cedar Ave under Hiawatha Ave",
-          "status": "closed",
-          "reason": "🤷",
-          "agency": "MnDOT",
+          "status": "open",
           "source": "CJD",
-          "last_updated": "2025-05-29"
+          "last_updated": "2026-02-18"
         },
         "geometry": {
           "coordinates": [
@@ -1889,9 +1887,9 @@
         "type": "Feature",
         "properties": {
           "name": "Plymouth Ave bridge",
-          "status": "closed",
-          "reason": "Constructing trail under bridge",
-          "last_updated": "2025-05-30"
+          "status": "open",
+          "last_updated": "2026-02-18",
+          "source": "official"
         },
         "geometry": {
           "coordinates": [
@@ -1923,9 +1921,9 @@
         "properties": {
           "name": "Northern Pacific Bridge Number 9",
           "agency": "City of Minneapolis",
-          "status": "closed",
-          "reason": "Deck and railing replacement, rehabilitation of Abutment 1",
-          "last_updated": "2025-05-30"
+          "status": "open",
+          "last_updated": "2026-02-18",
+          "source": "CJD"
         },
         "geometry": {
           "coordinates": [-93.24114320847895, 44.97773934115895],
