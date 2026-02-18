@@ -82,6 +82,7 @@
    <td>&#x1f494;</td><td>CLOSED :(</td>
   </tr>
  </table>
+ <p><strong id="last-updated"></strong></p>
  <p>Click on a map marker below for more information about a crossing.</p>
  <p class="sub">Contributions welcome: <a href="mailto:gridlinks@chrisdaniel.net">E-mail</a> | <a href="https://bsky.app/profile/chrisdaniel.net">Bluesky</a> | <a href="https://mstdn.social/@cjdaniel">Mastodon</a> | <a href="https://github.com/cjdaniel/gridlinks/">Source code</a></p>
 
@@ -131,6 +132,19 @@
  xhr.responseType = 'json';
  xhr.onload = function() {
      if (xhr.status !== 200) return
+     let latestDate = '';
+     xhr.response.features.forEach(function(f) {
+         if (f.properties.last_updated && f.properties.last_updated > latestDate) {
+             latestDate = f.properties.last_updated;
+         }
+     });
+     if (latestDate) {
+         const [y, m, d] = latestDate.split('-').map(Number);
+         const dateObj = new Date(y, m - 1, d);
+         const formatted = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+         document.getElementById('last-updated').textContent = 'Last updated ' + formatted;
+     }
+
      L.geoJSON(xhr.response, {
         pointToLayer: function(feature, latlng) {
             marker = L.marker();
