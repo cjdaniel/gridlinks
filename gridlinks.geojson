@@ -1556,9 +1556,9 @@
         "type": "Feature",
         "properties": {
           "name": "Cedar Lake Trail under I-94",
-          "status": "closed",
-          "reason": "Green Line Extension LRT construction",
-          "agency": "Metro Transit"
+          "status": "open",
+          "source": "CJD",
+          "last_updated": "2026-02-19"
         },
         "geometry": {
           "coordinates": [
