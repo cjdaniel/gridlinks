@@ -176,13 +176,16 @@
    html: '&#x2754'
  }
  const openMarkerOptions = {
-   icon: L.divIcon(openIconOptions)
+   icon: L.divIcon(openIconOptions),
+   zIndexOffset: 0
  }
  const closedMarkerOptions = {
-   icon: L.divIcon(closedIconOptions)
+   icon: L.divIcon(closedIconOptions),
+   zIndexOffset: 1000
  }
  const defaultMarkerOptions = {
-   icon: L.divIcon(defaultIconOptions)
+   icon: L.divIcon(defaultIconOptions),
+   zIndexOffset: 500
  }
 
  let xhr = new XMLHttpRequest();
@@ -227,12 +230,12 @@
             if(feature.properties && feature.properties.status) {
                 switch(feature.properties.status) {
                     case 'closed':
-                        details += 'Reason: '+feature.properties.reason+'<br/>'
-                            +'Agency: '+feature.properties.agency+'<br/>'
+                        details += `Reason: ${feature.properties.reason}<br/>
+                                    Agency: ${feature.properties.agency}<br/>`
                         break;
                 }
-                details += 'Source: '+feature.properties.source+'<br/>'
-                    +'Last updated: '+feature.properties.last_updated+'<br/>'
+                details += `Source: ${feature.properties.source}<br/>
+                            Last updated: ${feature.properties.last_updated}<br/>`
             }
             var popupContent = '<strong>'+feature.properties.name+'</strong><br/>'
                 +'Status: '+feature.properties.status+'<br/>'
