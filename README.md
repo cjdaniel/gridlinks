@@ -13,3 +13,16 @@ If you like, [geojson.io](https://geojson.io) provides a nice, graphical map edi
 To make your own edits, fork this repository, paste in your changes and submit a pull request to this repo.
 
 All contributions welcomed!
+
+## Development setup
+
+After cloning, install the provided git hooks:
+
+```sh
+git config core.hooksPath hooks
+chmod +x hooks/pre-commit
+```
+
+### Hooks
+
+**pre-commit** — checks that no coordinates in staged `.geojson` files have more than 6 decimal places of precision (beyond ~0.1m, extra digits are noise).

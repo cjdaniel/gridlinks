@@ -1,0 +1,26 @@
+#!/bin/sh
+# Check that no coordinates in staged GeoJSON files exceed 6 decimal places
+
+geojson_files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.geojson$')
+
+if [ -z "$geojson_files" ]; then
+    exit 0
+fi
+
+failed=0
+for f in $geojson_files; do
+    # Match numbers with more than 6 decimal digits (7+)
+    matches=$(git show ":$f" | grep -oE '-?[0-9]+\.[0-9]{7,}')
+    if [ -n "$matches" ]; then
+        echo "ERROR: $f contains coordinates with more than 6 decimal places:"
+        echo "$matches" | sed 's/^/  /'
+        failed=1
+    fi
+done
+
+if [ "$failed" -eq 1 ]; then
+    echo "Please reduce coordinate precision to at most 6 decimal places."
+    exit 1
+fi
+
+exit 0
