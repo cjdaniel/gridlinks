@@ -2068,6 +2068,22 @@
                 ],
                 "type": "Point"
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Windsor Ave crossing of MN-100",
+                "status": "open",
+                "source": "Bluesky - noslracs",
+                "last_updated": "2026-03-21"
+            },
+            "geometry": {
+                "coordinates": [
+                    44.903933,
+                    -93.349898
+                ],
+                "type": "Point"
+            }
         }
     ]
 }
