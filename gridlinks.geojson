@@ -1946,6 +1946,37 @@
           ],
           "type": "Point"
         }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name": "Walnut Street Stairway (aka J.J. Hill Stairway)",
+            "status": "closed",
+            "agency": "City of St. Paul",
+            "source": "official",
+            "url": "https://www.stpaul.gov/projects/public-works/pw2022walnutststairway"
+        },
+        "geometry": {
+            "type": "LineString",
+            "coordinates": [
+                [
+                    -93.109892,
+                    44.944995
+                ],
+                [
+                    -93.109493,
+                    44.94481
+                ],
+                [
+                    -93.108149,
+                    44.944412
+                ],
+                [
+                    -93.108049,
+                    44.944356
+                ]
+            ]
+        }
       }
     ]
   }

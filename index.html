@@ -234,11 +234,25 @@
                 details += 'Source: '+feature.properties.source+'<br/>'
                     +'Last updated: '+feature.properties.last_updated+'<br/>'
             }
-            layer.bindPopup(
-                '<strong>'+feature.properties.name+'</strong><br/>'
+            var popupContent = '<strong>'+feature.properties.name+'</strong><br/>'
                 +'Status: '+feature.properties.status+'<br/>'
-                +details
-            );
+                +details;
+            layer.bindPopup(popupContent);
+
+            if (feature.geometry.type === 'LineString') {
+                var coords = feature.geometry.coordinates;
+                var latSum = 0, lngSum = 0;
+                coords.forEach(function(c) { lngSum += c[0]; latSum += c[1]; });
+                var centroid = [latSum / coords.length, lngSum / coords.length];
+                var markerOpts = defaultMarkerOptions;
+                if (feature.properties && feature.properties.status) {
+                    switch(feature.properties.status) {
+                        case 'open':   markerOpts = openMarkerOptions;   break;
+                        case 'closed': markerOpts = closedMarkerOptions; break;
+                    }
+                }
+                L.marker(centroid, markerOpts).bindPopup(popupContent).addTo(map);
+            }
         }
      }).addTo(map);
  };
