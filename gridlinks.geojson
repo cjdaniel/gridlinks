@@ -1994,8 +1994,8 @@
             "geometry": {
                 "coordinates": [
                     [
-                        -93.1194541210609,
-                        44.9396945582655
+                        -93.119454,
+                        44.939694
                     ],
                     [
                         -93.11902360747521,
@@ -2048,7 +2048,23 @@
             "geometry": {
                 "coordinates": [
                     -93.042625,
-                    44.946690
+                    44.94669
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sam Morgan trail crossing of railroad and Childs Rd",
+                "status": "open",
+                "source": "CJD",
+                "last_updated": "2026-03-21"
+            },
+            "geometry": {
+                "coordinates": [
+                    -93.054386,
+                    44.943398
                 ],
                 "type": "Point"
             }
