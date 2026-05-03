@@ -2009,9 +2009,11 @@
             "type": "Feature",
             "properties": {
                 "name": "Walnut St crossing of 35E",
-                "status": "open",
-                "source": "CJD",
-                "last_updated": "2026-03-19"
+                "status": "closed",
+                "source": "official",
+                "agency": "MnDOT",
+                "reason": "Reconstruct ramp, replace stairs, paint and install salvaged ornamental railing",
+                "last_updated": "2026-05-02"
             },
             "geometry": {
                 "coordinates": [
