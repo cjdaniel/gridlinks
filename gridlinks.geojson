@@ -41,10 +41,10 @@
             "type": "Feature",
             "properties": {
                 "name": "24th St pedestrian bridge over Hiawatha Ave",
-                "status": "open",
+                "status": "closed",
+                "reason": "taken over by drugs/homeless and given up on",
                 "accessible": "yes",
-                "source": "CJD",
-                "last_updated": "2025-05-29"
+                "last_updated": "2026-06-04"
             },
             "geometry": {
                 "coordinates": [
