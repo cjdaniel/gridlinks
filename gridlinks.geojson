@@ -6,10 +6,11 @@
             "properties": {
                 "name": "Franklin Ave under Hiawatha Ave",
                 "status": "closed",
-                "reason": "🤷",
+                "reason": "taken over by drugs/homeless and given up on",
                 "agency": "MnDOT",
                 "source": "CJD",
-                "last_updated": "2025-05-29"
+                "accessible": "yes",
+                "last_updated": "2026-06-04"
             },
             "geometry": {
                 "coordinates": [
@@ -24,9 +25,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Cedar Ave under Hiawatha Ave",
-                "status": "open",
+                "status": "closed",
+                "reason": "taken over by drugs/homeless and given up on",
                 "source": "CJD",
-                "last_updated": "2026-02-18"
+                "last_updated": "2026-06-04"
             },
             "geometry": {
                 "coordinates": [
