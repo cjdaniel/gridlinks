@@ -4,6 +4,7 @@
 <head>
  <title>Grid Links</title>
  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="shortcut icon" href="favicon.svg" type="image/svg">
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -16,7 +17,7 @@
     body {
        margin: 0;
        padding: 0;
-
+       overflow: hidden;
        background: #eeeeee;
        color: #111111;
        font-family: Helvetica, sans-serif;
@@ -26,17 +27,18 @@
        height: 100%;
     }
     h1 {
-        margin: 1em auto 0.5em auto;
-        font-size: 40px;
-        text-align: center;
-        color: black;
-        text-shadow: 1px 1px 2px #666;
+        margin: 0 0 0.4em 0;
+        font-size: 22px;
+        color: #111111;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+        letter-spacing: 0.05em;
     }
     p {
-        text-align: center;
+        margin: 0.4em 0;
     }
     p.sub {
         color: #666;
+        font-size: 0.85em;
     }
     .critical {
         color: #cc1111;
@@ -48,17 +50,22 @@
         text-decoration: none;
     }
     table#legend {
-        margin: auto;
-        font-size: 2em;
+        font-size: 1.3em;
+        margin: 0.3em 0;
+        border-collapse: collapse;
     }
     table#legend td {
-        padding-left: 0.3em;
+        padding: 0.1em 0.4em 0.1em 0;
     }
     div#map {
-        width: 75%;
-        height: 75%;
-        margin: auto;
-        border: 3px solid #6495ed;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border: none;
+        z-index: 0;
     }
 
     #footer p {
@@ -69,29 +76,90 @@
         font-size: 30px; /* needs to correspond to size below */
     }
 
-    #dark-toggle {
+    /* Shared floating panel style */
+    .map-panel {
         position: fixed;
-        top: 1em;
-        right: 1em;
-        background: none;
-        border: none;
-        padding: 0.4em 0.7em;
-        cursor: pointer;
-        font-size: 18px;
         z-index: 1000;
-        line-height: 1;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 12px;
+        padding: 0.9em 1.1em;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+        .map-panel { background: rgba(238, 238, 238, 0.96); }
     }
 
+    #panel-title {
+        top: 1em;
+        left: 1em;
+        max-width: 210px;
+    }
+
+    #last-updated {
+        display: block;
+        font-size: 0.78em;
+        color: #555;
+        margin-top: 0.35em;
+    }
+
+    /* Control buttons */
+    #dark-toggle, #info-toggle {
+        position: fixed;
+        right: 1em;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+        padding: 0.35em 0.65em;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 1001;
+        line-height: 1;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        color: inherit;
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+        #dark-toggle, #info-toggle { background: rgba(238, 238, 238, 0.96); }
+    }
+    #dark-toggle {
+        top: 1em;
+    }
+    #info-toggle {
+        top: 3.8em;
+    }
+
+    /* Info panel */
+    #panel-info {
+        top: 7em;
+        right: 1em;
+        max-width: 280px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+    #panel-info.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Dark mode */
     body.dark {
         background: #1a1a1a;
         color: #e0e0e0;
     }
     body.dark h1 {
-        color: white;
+        color: #e0e0e0;
         text-shadow: 1px 1px 2px #000;
     }
     body.dark p.sub {
         color: #999;
+    }
+    body.dark #last-updated {
+        color: #aaa;
     }
     body.dark .critical {
         color: #ff4444;
@@ -117,6 +185,42 @@
     body.dark .leaflet-control-attribution a {
         color: #6495ed;
     }
+    body.dark .map-panel,
+    body.dark #dark-toggle,
+    body.dark #info-toggle {
+        background: rgba(26, 26, 26, 0.65);
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+        body.dark .map-panel,
+        body.dark #dark-toggle,
+        body.dark #info-toggle {
+            background: rgba(26, 26, 26, 0.97);
+        }
+    }
+
+    /* Mobile: panels anchor to bottom edge */
+    @media (max-width: 640px) {
+        #panel-title {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            max-width: none;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 16px 16px 0 0;
+        }
+        #panel-info {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: none;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 16px 16px 0 0;
+        }
+    }
  </style>
 
  <script>
@@ -132,25 +236,31 @@
 
 <body>
  <button id="dark-toggle" aria-label="Toggle dark/light style" title="Toggle dark/light style"></button>
- <h1>GRID LINKS</h1>
- <p>The map below shows the open or closed status of <span class="critical">critical bicycle and pedestrian links</span> across urban barriers like highways.</p>
- <table id="legend">
-  <tr>
-   <td>&#x1f499;</td><td>Open!</td>
-  </tr>
-  <tr>
-   <td>&#x1f494;</td><td>CLOSED :(</td>
-  </tr>
- </table>
- <p><strong id="last-updated"></strong></p>
- <p>Click on a map marker below for more information about a crossing.</p>
- <p class="sub">Contributions welcome: <a href="mailto:gridlinks@chrisdaniel.net">E-mail</a> | <a href="https://bsky.app/profile/chrisdaniel.net">Bluesky</a> | <a href="https://mstdn.social/@cjdaniel">Mastodon</a> | <a href="https://github.com/cjdaniel/gridlinks/">Source code</a></p>
+ <button id="info-toggle" aria-label="About this map" title="About this map">ⓘ</button>
+
+ <div id="panel-title" class="map-panel">
+  <h1>GRID LINKS</h1>
+  <table id="legend">
+   <tr>
+    <td>&#x1f499;</td><td>Open!</td>
+   </tr>
+   <tr>
+    <td>&#x1f494;</td><td>CLOSED :(</td>
+   </tr>
+  </table>
+  <strong id="last-updated"></strong>
+ </div>
+
+ <div id="panel-info" class="map-panel">
+  <p>The map shows the open or closed status of <span class="critical">critical bicycle and pedestrian links</span> across urban barriers like highways.</p>
+  <p class="sub" style="margin-top:0.6em">Contributions welcome: <a href="mailto:gridlinks@chrisdaniel.net">E-mail</a> | <a href="https://bsky.app/profile/chrisdaniel.net">Bluesky</a> | <a href="https://mstdn.social/@cjdaniel">Mastodon</a> | <a href="https://github.com/cjdaniel/gridlinks/">Source code</a></p>
+ </div>
 
  <div id="map"></div>
- <p class="sub">Contributions welcome: <a href="mailto:gridlinks@chrisdaniel.net">E-mail</a> | <a href="https://bsky.app/profile/chrisdaniel.net">Bluesky</a> | <a href="https://mstdn.social/@cjdaniel">Mastodon</a> | <a href="https://github.com/cjdaniel/gridlinks/">Source code</a></p>
 
  <script>
- var map = L.map('map').setView([44.952460, -93.182461], 12);
+ var map = L.map('map', { zoomControl: false }).setView([44.952460, -93.182461], 12);
+ L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -160,19 +270,19 @@
  const size = 30; // needs to correspond to font-size above
  const openIconOptions = {
    iconSize  : [size, size],
-   iconAnchor: [size/2, size + 9], 
+   iconAnchor: [size/2, size + 9],
    className : 'openmarker',
    html: '&#x1f499'
  }
  const closedIconOptions = {
    iconSize  : [size, size],
-   iconAnchor: [size/2, size + 9], 
+   iconAnchor: [size/2, size + 9],
    className : 'closedmarker',
    html: '&#x1f494'
  }
  const defaultIconOptions = {
    iconSize  : [size, size],
-   iconAnchor: [size/2, size + 9], 
+   iconAnchor: [size/2, size + 9],
    className : 'defaultmarker',
    html: '&#x2754'
  }
@@ -271,7 +381,7 @@
      function applyDark(dark) {
          document.body.classList.toggle('dark', dark);
          document.documentElement.style.background = dark ? '#1a1a1a' : '';
-         toggle.textContent = dark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+         toggle.textContent = dark ? '☀️' : '🌙';
      }
 
      applyDark(isDark);
@@ -288,6 +398,18 @@
              isDark = e.matches;
              applyDark(isDark);
          }
+     });
+ })();
+
+ // Info panel toggle
+ (function() {
+     var infoToggle = document.getElementById('info-toggle');
+     var infoPanel = document.getElementById('panel-info');
+     var isOpen = false;
+
+     infoToggle.addEventListener('click', function() {
+         isOpen = !isOpen;
+         infoPanel.classList.toggle('visible', isOpen);
      });
  })();
 
