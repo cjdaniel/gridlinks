@@ -187,16 +187,28 @@
     }
     body.dark .map-panel,
     body.dark #dark-toggle,
-    body.dark #info-toggle {
+    body.dark #info-toggle,
+    body.dark #title-reopen {
         background: rgba(26, 26, 26, 0.65);
         border-color: rgba(255, 255, 255, 0.08);
     }
     @supports not (backdrop-filter: blur(1px)) {
         body.dark .map-panel,
         body.dark #dark-toggle,
-        body.dark #info-toggle {
+        body.dark #info-toggle,
+        body.dark #title-reopen {
             background: rgba(26, 26, 26, 0.97);
         }
+    }
+
+    /* Close button inside title panel — mobile only */
+    #title-close {
+        display: none;
+    }
+
+    /* Reopen button — mobile only, hidden until panel is dismissed */
+    #title-reopen {
+        display: none;
     }
 
     /* Mobile: panels anchor to bottom edge */
@@ -209,6 +221,11 @@
             width: 100%;
             box-sizing: border-box;
             border-radius: 16px 16px 0 0;
+            transition: opacity 0.2s ease;
+        }
+        #panel-title.dismissed {
+            opacity: 0;
+            pointer-events: none;
         }
         #panel-info {
             top: auto;
@@ -219,6 +236,45 @@
             width: 100%;
             box-sizing: border-box;
             border-radius: 16px 16px 0 0;
+        }
+        #title-close {
+            display: block;
+            position: absolute;
+            top: 0.5em;
+            right: 0.6em;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: inherit;
+            opacity: 0.5;
+            padding: 0.2em 0.4em;
+        }
+        #panel-title {
+            position: relative;
+        }
+        #title-reopen {
+            display: block;
+            position: fixed;
+            bottom: 1em;
+            left: 1em;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            padding: 0.35em 0.65em;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+        #title-reopen.visible {
+            opacity: 1;
+            pointer-events: auto;
         }
     }
  </style>
@@ -239,6 +295,7 @@
  <button id="info-toggle" aria-label="About this map" title="About this map">ⓘ</button>
 
  <div id="panel-title" class="map-panel">
+  <button id="title-close" aria-label="Close panel">✕</button>
   <h1>GRID LINKS</h1>
   <table id="legend">
    <tr>
@@ -250,6 +307,8 @@
   </table>
   <strong id="last-updated"></strong>
  </div>
+
+ <button id="title-reopen" aria-label="Show legend">&#x1f499;</button>
 
  <div id="panel-info" class="map-panel">
   <p>The map shows the open or closed status of <span class="critical">critical bicycle and pedestrian links</span> across urban barriers like highways.</p>
@@ -410,6 +469,23 @@
      infoToggle.addEventListener('click', function() {
          isOpen = !isOpen;
          infoPanel.classList.toggle('visible', isOpen);
+     });
+ })();
+
+ // Title panel dismiss/reopen (mobile only)
+ (function() {
+     var closeBtn = document.getElementById('title-close');
+     var reopenBtn = document.getElementById('title-reopen');
+     var titlePanel = document.getElementById('panel-title');
+
+     closeBtn.addEventListener('click', function() {
+         titlePanel.classList.add('dismissed');
+         reopenBtn.classList.add('visible');
+     });
+
+     reopenBtn.addEventListener('click', function() {
+         titlePanel.classList.remove('dismissed');
+         reopenBtn.classList.remove('visible');
      });
  })();
 
