@@ -106,7 +106,7 @@
     }
 
     /* Control buttons */
-    #dark-toggle, #info-toggle {
+    #dark-toggle, #info-toggle, #zoom-in, #zoom-out {
         position: fixed;
         right: 1em;
         background: rgba(255, 255, 255, 0.2);
@@ -123,13 +123,19 @@
         color: inherit;
     }
     @supports not (backdrop-filter: blur(1px)) {
-        #dark-toggle, #info-toggle { background: rgba(238, 238, 238, 0.96); }
+        #dark-toggle, #info-toggle, #zoom-in, #zoom-out { background: rgba(238, 238, 238, 0.96); }
     }
     #dark-toggle {
         top: 1em;
     }
     #info-toggle {
         top: 3.8em;
+    }
+    #zoom-in {
+        top: 6.6em;
+    }
+    #zoom-out {
+        top: 9.4em;
     }
 
     /* Info panel */
@@ -188,6 +194,8 @@
     body.dark .map-panel,
     body.dark #dark-toggle,
     body.dark #info-toggle,
+    body.dark #zoom-in,
+    body.dark #zoom-out,
     body.dark #title-reopen {
         background: rgba(26, 26, 26, 0.65);
         border-color: rgba(255, 255, 255, 0.08);
@@ -196,9 +204,26 @@
         body.dark .map-panel,
         body.dark #dark-toggle,
         body.dark #info-toggle,
+        body.dark #zoom-in,
+        body.dark #zoom-out,
         body.dark #title-reopen {
             background: rgba(26, 26, 26, 0.97);
         }
+    }
+
+    /* Close button inside info panel */
+    #info-close {
+        display: block;
+        position: absolute;
+        top: 0.5em;
+        right: 0.6em;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: inherit;
+        opacity: 0.5;
+        padding: 0.2em 0.4em;
     }
 
     /* Close button inside title panel — mobile only */
@@ -250,9 +275,6 @@
             opacity: 0.5;
             padding: 0.2em 0.4em;
         }
-        #panel-title {
-            position: relative;
-        }
         #title-reopen {
             display: block;
             position: fixed;
@@ -293,6 +315,8 @@
 <body>
  <button id="dark-toggle" aria-label="Toggle dark/light style" title="Toggle dark/light style"></button>
  <button id="info-toggle" aria-label="About this map" title="About this map">ⓘ</button>
+ <button id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+ <button id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
 
  <div id="panel-title" class="map-panel">
   <button id="title-close" aria-label="Close panel">✕</button>
@@ -311,6 +335,7 @@
  <button id="title-reopen" aria-label="Show legend">&#x1f499;</button>
 
  <div id="panel-info" class="map-panel">
+  <button id="info-close" aria-label="Close panel">✕</button>
   <p>The map shows the open or closed status of <span class="critical">critical bicycle and pedestrian links</span> across urban barriers like highways.</p>
   <p class="sub" style="margin-top:0.6em">Contributions welcome: <a href="mailto:gridlinks@chrisdaniel.net">E-mail</a> | <a href="https://bsky.app/profile/chrisdaniel.net">Bluesky</a> | <a href="https://mstdn.social/@cjdaniel">Mastodon</a> | <a href="https://github.com/cjdaniel/gridlinks/">Source code</a></p>
  </div>
@@ -319,7 +344,6 @@
 
  <script>
  var map = L.map('map', { zoomControl: false }).setView([44.952460, -93.182461], 12);
- L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -460,16 +484,32 @@
      });
  })();
 
+ // Zoom controls
+ document.getElementById('zoom-in').addEventListener('click', function() { map.zoomIn(); });
+ document.getElementById('zoom-out').addEventListener('click', function() { map.zoomOut(); });
+
  // Info panel toggle
  (function() {
      var infoToggle = document.getElementById('info-toggle');
+     var infoClose = document.getElementById('info-close');
      var infoPanel = document.getElementById('panel-info');
+     var titlePanel = document.getElementById('panel-title');
      var isOpen = false;
+     var mobile = window.matchMedia('(max-width: 640px)');
+
+     function closeInfo() {
+         isOpen = false;
+         infoPanel.classList.remove('visible');
+         if (mobile.matches) titlePanel.classList.remove('dismissed');
+     }
 
      infoToggle.addEventListener('click', function() {
          isOpen = !isOpen;
          infoPanel.classList.toggle('visible', isOpen);
+         if (mobile.matches) titlePanel.classList.toggle('dismissed', isOpen);
      });
+
+     infoClose.addEventListener('click', closeInfo);
  })();
 
  // Title panel dismiss/reopen (mobile only)
